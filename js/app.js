@@ -4,7 +4,7 @@ app.config(function($routeProvider){
   $routeProvider.
   when('/', {
     templateUrl: 'index.html',
-    controller: 'mainCtrl'
+    controller: 'teaDataController'
   })
   .otherwise({
     redirectTo: '/'
