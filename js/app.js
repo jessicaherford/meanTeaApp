@@ -3,7 +3,7 @@ var app = angular.module('meanTeaApp',['ngRoute']);
 app.config(function($routeProvider){
   $routeProvider.
   when('/', {
-    templateUrl: 'index.html',
+    templateUrl: 'templates/allteas.html',
     controller: 'teaDataController'
   })
   .otherwise({
@@ -11,3 +11,10 @@ app.config(function($routeProvider){
   })
 
 })
+
+
+// module.filter('yesNo', function() {
+//     return function(input) {
+//         return input ? 'yes' : 'no';
+//     }
+// }

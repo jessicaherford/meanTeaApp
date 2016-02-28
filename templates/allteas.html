@@ -1,0 +1,40 @@
+<div class='container'>
+  <div class='section' id='allTeasSearch'>
+    <h4 class='is-inline'>Search by category:</h4>
+    <select>
+      <option value="dark">Dark</option>
+      <option value="cold">Cold</option>
+      <option value="awesome">Awesome</option>
+    </select>
+  </div>
+  <div class='columns'>
+    <div class='column is-third'>
+      <h4>Teas:</h4>
+    </div>
+    <div class='column'>
+      Information
+    </div>
+  </div>
+<div ng-repeat='tea in teas' class='columns'>
+  <div class='cloumn is-third'>
+    <img src= '{{ tea.imageUrl }}' alt="tea pic">
+  </div>
+  <div class='column'>
+    <h3 class='title is-3'>
+      <strong>{{ tea.name }}</strong>
+    </h3>
+    <p>
+      Price: {{tea.price/100 | currency}}
+    </p>
+    <p>
+      Ingredients: {{tea.ingredients}}
+    </p>
+    <p>
+      Rating: {{tea.rating}}
+    </p>
+    <p>
+      In Stock? {{ tea.inStock }}
+    </p>
+  </div>
+</div>
+</div>

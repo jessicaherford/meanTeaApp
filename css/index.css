@@ -1,0 +1,16 @@
+*{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.title.is-1{
+  color: #FA7E5A;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.column{
+  padding: 40px;
+}
+#allTeasSearch{
+  background-color: #F5F7FA;
+}

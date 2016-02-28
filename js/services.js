@@ -5,4 +5,3 @@ app.factory('teas', function($http){
     }
   };
 });
-// /Users/jessicaherford/workspace/meanTeaApp/json/teas.json
