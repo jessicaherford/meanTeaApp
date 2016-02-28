@@ -8,9 +8,25 @@
   font-weight: 700;
 }
 
-.column{
-  padding: 40px;
-}
 #allTeasSearch{
   background-color: #F5F7FA;
+  padding: 20px;
+}
+
+#teaInfo{
+  padding: 10px 0px 10px 30px;
+}
+
+#teaCategory{
+  list-style-type: circle;
+  margin-left: 28px;
+}
+
+
+#box{
+  margin: 20px;
+}
+
+#box1column.column{
+  padding-bottom: 20px;
 }

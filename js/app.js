@@ -11,10 +11,3 @@ app.config(function($routeProvider){
   })
 
 })
-
-
-// module.filter('yesNo', function() {
-//     return function(input) {
-//         return input ? 'yes' : 'no';
-//     }
-// }
