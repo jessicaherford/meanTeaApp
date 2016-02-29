@@ -34,7 +34,7 @@
       </select>
     </span>
 </div>
-<div ng-repeat='tea in teas | filter:searchable | orderBy:sortByPrice | filter:sortBy' class='column'  >
+<div ng-repeat='tea in teas | filter:searchable | orderBy:sortByPrice | filter:sortBy' class='column' >
   <div class="box columns" id='box'>
   <div class='cloumn is-third'>
     <img src= '{{ tea.imageUrl }}' alt="tea pic">
@@ -44,7 +44,7 @@
       <strong ng-model='name'>{{ tea.name }}</strong>
       <span class='is-pulled-right'>
         <h4 class='is-inline'><strong>Quantity:</strong></h4>
-        <select class='is-inline'>
+        <select class='is-inline' ng-model='quantity'>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -54,7 +54,7 @@
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        <button class="button is-danger" style='background-color: #EFAC56' ng-click='shopCart()'>Add To Bag</button>
+        <button class="button is-danger" style='background-color: #EFAC56' ng-click='add(quantity)'>Add To Bag</button>
     </span>
     </h3>
     <p ng-model='price'>
