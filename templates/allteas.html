@@ -1,15 +1,22 @@
 <div class='container'>
   <div class='section' id='allTeasSearch'>
     <h4 class='is-inline'>Search by category:</h4>
-    <select>
+    <select ng-model='sortBy'>
       <option value="dark">Dark</option>
       <option value="cold">Cold</option>
       <option value="awesome">Awesome</option>
+      <option value="lucid">Lucid</option>
+      <option value="hot">Hot</option>
+      <option value="awesome">Awesome</option>
+      <option value="summer">Summer</option>
+      <option value="warm">Warm</option>
+      <option value="spring">Spring</option>
+      <option value="winter">Winter</option>
     </select>
     <h4 class='is-inline'>Search by name:</h4>
-    <input type="text">
+    <input type="text" ng-model="searchable">
     <span class='is-pulled-right'>
-      <button class="button is-danger">Checkout | Bag: Empty!</button>
+      <a href="/#/cart"><button class="button is-danger">Checkout | Bag: Empty!</button></a>
     </span>
   </div>
   <div class='box columns'  id='box'>
@@ -21,20 +28,20 @@
     </div>
     <span class='is-pulled-right' style='margin-top: 12px'>
       <h4 class='is-inline'>Sort By Price: </h4>
-      <select class='is-inline'>
-        <option>Low</option>
-        <option>High</option>
+      <select class='is-inline' ng-model='sortByPrice'>
+        <option value='+price'>Low</option>
+        <option value='-price'>High</option>
       </select>
     </span>
 </div>
-<div ng-repeat='tea in teas' class='colum'>
+<div ng-repeat='tea in teas | filter:searchable | orderBy:sortByPrice | filter:sortBy' class='column'  >
   <div class="box columns" id='box'>
   <div class='cloumn is-third'>
     <img src= '{{ tea.imageUrl }}' alt="tea pic">
   </div>
   <div class='column' id='teaInfo'>
     <h3 class='title is-3'>
-      <strong>{{ tea.name }}</strong>
+      <strong ng-model='name'>{{ tea.name }}</strong>
       <span class='is-pulled-right'>
         <h4 class='is-inline'><strong>Quantity:</strong></h4>
         <select class='is-inline'>
@@ -47,10 +54,10 @@
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        <button class="button is-danger" style='background-color: #EFAC56'>Add To Bag</button>
+        <button class="button is-danger" style='background-color: #EFAC56' ng-click='shopCart()'>Add To Bag</button>
     </span>
     </h3>
-    <p>
+    <p ng-model='price'>
       Price: {{tea.price/100 | currency}}
     </p>
     <p>

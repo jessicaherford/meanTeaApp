@@ -11,3 +11,15 @@ app.filter('yesNo', function() {
         return input ? ' ' + 'Yes' : ' ' + '  No';
     }
 })
+
+
+app.service('shopCart', function(){
+  alert("HI!");
+  // var cart = {};
+  // cart.addItem = function(name){
+  //   var cartItem = {};
+  //   cart.name = this.tea.name;
+  //   cart.push(cartItem);
+  // }
+  // console.log(cart);
+})

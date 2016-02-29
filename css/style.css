@@ -6,6 +6,7 @@
   color: #FA7E5A;
   font-style: italic;
   font-weight: 700;
+  margin: 20px;
 }
 
 #allTeasSearch{
@@ -29,4 +30,14 @@
 
 #box1column.column{
   padding-bottom: 20px;
+}
+
+#cart{
+  padding: 20px;
+  background-color: #F5F7FA;
+}
+
+#cartBox{
+  padding: 20px;
+  margin: 20px;
 }
