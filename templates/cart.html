@@ -7,7 +7,7 @@
       <h4>Product</h4>
     </div>
     <div class='column'>
-      Quantity
+      Quantity (Click Amount to Edit)
     </div>
     <div class='column'>
       Subtotal
@@ -15,28 +15,31 @@
     </div>
     <div class='box columns' id='cartBox' ng-repeat='item in cart'>
       <div class='cloumn is-half' id='cartImg'>
-      <h1>Tea Name: {{item.name}} </h1>
+      <h1 class= 'title is-3'>Tea Name: {{item.name}} </h1>
       <img src= '{{ item.picture }}' alt="tea pic">
       </div>
       <div class='column'>
+        <br>
+        <br>
         <p>
           Caffeine Scale: {{ item.caffeineScale}}
         </p>
+        <br>
         <p>
           Ingredients: {{ item.ingredients }}
         </p>
+        <br>
         <p>
           Rating: {{ item.rating }}
         </p>
       </div>
       <div class='column'>
-        <p id='cartQuantityPadding'>{{item.quantity}}</p>
+        <p id='cartQuantityPadding' editable-text='item.quantity' ng-click='item.total/100'>{{item.quantity}}</p>
       </div>
       <div class='column is-pulled-right' style='margin-right: 36px'>
        <p class='cartSubtotalPadding is-text-right'>{{ item.total/100 | currency}}</p>
       </div>
         <span class='is-pulled-right' style='margin-top: 12px'>
-          <a class="button is-warning" ng-click="edit()">Edit</a>
           <a class="button is-danger" ng-click="delete()">Remove</a>
       </div>
     </div>
