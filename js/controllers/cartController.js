@@ -10,13 +10,10 @@ app.controller('cartController',[ '$scope','shopCart', function($scope, shopCart
           return '$' + parseFloat(teaTotal).toFixed(2);
         }
 
-  $scope.edit = function(){
-    $scope.showEdit = !$scope.showEdit
-  }
+
 
   $scope.delete = function (index) {
     $scope.cart.splice(index, 1);
-    // return total();
   }
 
 }])

@@ -1,6 +1,5 @@
-app.controller('teaDataController',[ '$scope', '$routeParams', '$http', 'shopCart', function($scope, $routeParams, $http, shopCart){
-  $scope.add = shopCart.add;
-  $scope.cart = shopCart.cart;
+app.controller('teaDataController',[ '$scope', function($scope, $routeParams, $http){
+
   $http.get('../json/teas.json').success(function(payload){
     $scope.teas = payload;
   })
