@@ -1,4 +1,4 @@
-<div class='container'>
+<div class='container' ng-controller='teaDataController'>
   <div class='section' id='allTeasSearch'>
     <h4 class='is-inline'>Search by category:</h4>
     <select ng-model='sortBy'>
@@ -34,7 +34,7 @@
       </select>
     </span>
 </div>
-<div ng-repeat='tea in teas | filter:searchable | orderBy:sortByPrice | filter:sortBy' class='column' >
+<div ng-repeat='tea in teas | filter:searchable | orderBy:sortByPrice | filter:sortBy'>
   <div class="box columns" id='box'>
   <div class='cloumn is-third'>
     <img src= '{{ tea.imageUrl }}' alt="tea pic">

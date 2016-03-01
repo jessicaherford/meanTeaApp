@@ -1,5 +1,7 @@
-<div class='container'>
+<div class='container' ng-controller='cartController'>
   <div class='section' id='cart'>
+    <h2 class='is-inline title is-2' style='margin:10px'>My Shopping Bag</h2>
+    <h2 class='is-inline title is-2 is-pulled-right' style='margin:10px'>Order total: {{total()}} </h2>
   <div class='box columns'  id='box'>
     <div class='column is-half'>
       <h4>Product</h4>
@@ -11,27 +13,27 @@
       Subtotal
     </div>
     </div>
-    <div class='box columns' id='cartBox'>
+    <div class='box columns' id='cartBox' ng-repeat='item in cart'>
       <div class='cloumn is-half' id='cartImg'>
-      <h1>Tea Name</h1>
-      <img src="http://placehold.it/250x250">
+      <h1>Tea Name: {{item.name}} </h1>
+      <img src= '{{ item.picture }}' alt="tea pic">
       </div>
       <div class='column'>
         <p>
-          Caffeine Scale:
+          Caffeine Scale: {{ item.caffeineScale}}
         </p>
         <p>
-          Ingredients:
+          Ingredients: {{ item.ingredients }}
         </p>
         <p>
-          Rating:
+          Rating: {{ item.rating }}
         </p>
       </div>
       <div class='column'>
-        <p>Tea Quantity</p>
+        <p id='cartQuantityPadding'>{{item.quantity}}</p>
       </div>
-      <div class='column'>
-       <p>Tea Total</p>
+      <div class='column is-pulled-right' style='margin-right: 36px'>
+       <p class='cartSubtotalPadding is-text-right'>{{ item.total/100 | currency}}</p>
       </div>
         <span class='is-pulled-right' style='margin-top: 12px'>
           <a class="button is-warning">Edit</a>
