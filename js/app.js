@@ -8,6 +8,11 @@ app.config(function($routeProvider){
   })
   .when('/cart',{
     templateUrl: 'templates/cart.html',
+    controller: 'cartController'
   })
 
 })
+
+// app.run(function(editableOptions) {
+//   editableOptions.theme = 'default'; // bootstrap3 theme. Can be also 'bs2', 'default'
+// });

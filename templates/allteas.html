@@ -16,7 +16,7 @@
     <h4 class='is-inline'>Search by name:</h4>
     <input type="text" ng-model="searchable">
     <span class='is-pulled-right'>
-      <a href="/#/cart"><button class="button is-danger">Checkout | Bag: Empty!</button></a>
+      <a href="/#/cart"><button class="button is-danger">Checkout | Bag: <ng-pluralize count='cart.length' when="{'0': 'Empty!', '1': '(1) Item', 'other': '({{cart.length}}) Items'}" style='font-weight:bold'> </ng-pluralize></button></a>
     </span>
   </div>
   <div class='box columns'  id='box'>

@@ -36,8 +36,8 @@
        <p class='cartSubtotalPadding is-text-right'>{{ item.total/100 | currency}}</p>
       </div>
         <span class='is-pulled-right' style='margin-top: 12px'>
-          <a class="button is-warning">Edit</a>
-          <a class="button is-danger">Remove</a>
+          <a class="button is-warning" ng-click="edit()">Edit</a>
+          <a class="button is-danger" ng-click="delete()">Remove</a>
       </div>
     </div>
 
